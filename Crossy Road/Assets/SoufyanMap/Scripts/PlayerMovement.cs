@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 	// Update is called once per frame
+	private bool CanMove = true;
+
 	void Update ()
     {
         Forward();
@@ -12,28 +14,33 @@ public class PlayerMovement : MonoBehaviour
         Right();
         Backward();
 	}
+	void Forward()
+	{
+		if (Input.GetKeyDown (KeyCode.W)) {	
+			
+				transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z + 1);
 
-    void Forward()
-    {
-        if(Input.GetKeyDown(KeyCode.W))
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1);
-        }
-    }
+		}
+	}
 
     void Left()
     {
         if(Input.GetKeyDown(KeyCode.A))
         {
-            transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
-        }
+			
+				transform.position = new Vector3 (transform.position.x - 1, transform.position.y, transform.position.z);
+
+		}
+
     }
 
     void Right()
     {
         if(Input.GetKeyDown(KeyCode.D))
         {
-            transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
+			
+				transform.position = new Vector3 (transform.position.x + 1, transform.position.y, transform.position.z);
+			
         }
     }
 
@@ -44,4 +51,6 @@ public class PlayerMovement : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
         }
     }
+
+
 }
