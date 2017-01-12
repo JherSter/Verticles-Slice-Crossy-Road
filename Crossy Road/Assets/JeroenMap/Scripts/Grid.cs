@@ -12,11 +12,11 @@ public class Grid : MonoBehaviour {
 		
 	}
 	
-	void UpdatePosition(){
+	/*void UpdatePosition(){
 		Vector3 newPos = transform.position + movement;
 		newPos = Vector3(Mathf.Round(newPos.x/gridSize.x)*gridSize.x,
 			Mathf.Round(newPos.y/gridSize.y)*gridSize.y,
 			Mathf.Round(newPos.z/gridSize.z)*gridSize.z);
 			transform.position = newPos;
-	}
+	}*/
 }
