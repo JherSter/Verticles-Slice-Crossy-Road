@@ -1,4 +1,4 @@
-Ll]ibrary/
+[Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
@@ -32,4 +32,5 @@ Library/*
 Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
 Library/ScriptAssemblies/Assembly-CSharp.dll
 Library/metadata/00/0000000000000000c000000000000000
-Library/ScriptAssemblies/Ass
+Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+Library/metadata/00/0000000000000000a000000000000000
