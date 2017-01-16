@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class Counter : MonoBehaviour
 {
-    [SerializeField] private int _count;
+    private int _count = 0;
+    private bool _playerForward = false;
+    [SerializeField] private GameObject _player;
+    private GUIText _guiText;
+
 	// Use this for initialization
 	void Start ()
     {
-		
+        _guiText = GetComponent<GUIText>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		
+        Increase();
 	}
 
     void Increase()
     {
+        _guiText.text = " " + _count;
 
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            _count++;
+            _playerForward = true;
+        }
     }
 
     void Decrease()
@@ -27,9 +37,9 @@ public class Counter : MonoBehaviour
 
     }
 
-    void Add()
+    void Add(int _temp)
     {
-
+        
     }
 
     void Reset()
@@ -37,7 +47,7 @@ public class Counter : MonoBehaviour
 
     }
 
-    void Set()
+    void Set(int _temp)
     {
 
     }
