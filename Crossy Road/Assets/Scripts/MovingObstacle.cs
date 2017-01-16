@@ -7,7 +7,6 @@ public class MovingObstacle : MonoBehaviour {
     public float speed;
     private Vector3 Vector;
     private Rigidbody Body;
-    Timer _Timer = new Timer()
 	// Use this for initialization
 	void Start () {
         Body = GetComponent<Rigidbody>();
@@ -15,7 +14,7 @@ public class MovingObstacle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector = Direction.normalized* Time.deltaTime*speed;
+        Vector = Direction.normalized * Time.deltaTime * speed;
         Body.velocity = Vector;
         Debug.Log(Vector);
 	}
