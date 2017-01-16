@@ -29,6 +29,7 @@ public class Timer : MonoBehaviour {
         {
             if(time == 0)
             {
+                Enabled = false;
                 timer_Trigger.Invoke();
                 if (Repeat)
                 {
@@ -51,6 +52,8 @@ public class Timer : MonoBehaviour {
     // resets the timer time to duration
     public void Reset()
     {
+        Enabled = true;
+
         time = duration;
     }
 }
