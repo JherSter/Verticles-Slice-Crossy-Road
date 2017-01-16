@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class PlayerDeath : MonoBehaviour {
 
     public UnityEvent Player_Died;
-    public List<string> DeathObjects = new List<string>();
+    public string[] DeathObjects;
 	// Use this for initialization
 	void Start () {
         if (Player_Died == null)
@@ -21,7 +21,14 @@ public class PlayerDeath : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         string objectName = collision.transform.tag;
-        DeathObjects.ForEach(banana => { if (banana == objectName) Die(); } );
+        foreach(string deathObject in DeathObjects)
+        {
+            if (deathObject == collision.transform.tag)
+            {
+                Die();
+                break;
+            }
+        }
     }
     void Die()
     {
