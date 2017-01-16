@@ -5,15 +5,16 @@ using UnityEngine.Events;
 
 public class Timer : MonoBehaviour {
     public float duration = 0;
-    public float time;
+    public float time = 0;
     public bool Enabled = false;
-    UnityEvent timer_Trigger;
+    public bool Repeat = false;
+    public UnityEvent timer_Trigger;
 
-    Timer(float _duration)
+    public Timer(float _duration)
     {
         duration = _duration;
     }
-	// Use this for initialization
+	// initialization
 	void Start () {
         if (timer_Trigger == null)
         {
@@ -26,20 +27,33 @@ public class Timer : MonoBehaviour {
 	void Update () {
 		if (enabled)
         {
-            
-            if (time< 0)
+            if(time == 0)
             {
-                time = 0;
+                Enabled = false;
+                timer_Trigger.Invoke();
+                if (Repeat)
+                {
+                    Reset();
+                }
             }
             else
             {
-                time -= Time.deltaTime;
+                if (time < 0)
+                {
+                    time = 0;
+                }
+                else
+                {
+                    time -= Time.deltaTime;
+                }
             }
-            
         }
 	}
+    // resets the timer time to duration
     public void Reset()
     {
+        Enabled = true;
+
         time = duration;
     }
 }
