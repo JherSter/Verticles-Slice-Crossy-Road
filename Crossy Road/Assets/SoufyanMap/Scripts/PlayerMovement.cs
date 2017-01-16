@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
         Backward();
 	}
 
-    void Forward()
+    public void Forward()
 	{
 		if (Input.GetKeyDown (KeyCode.W))
         {	
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 	}
 
-    void Left()
+    public void Left()
     {
         if(Input.GetKeyDown(KeyCode.A))
         {
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 		}
     }
 
-    void Right()
+    public void Right()
     {
         if(Input.GetKeyDown(KeyCode.D))
         {
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Backward()
+    public void Backward()
     {
         if(Input.GetKeyDown(KeyCode.S))
         {
