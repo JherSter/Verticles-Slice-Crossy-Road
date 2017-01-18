@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _rotateSpeed = 25;
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+
+    void Update ()
     {
         Forward();
         Left();
@@ -49,6 +50,4 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
         }
     }
-
-
 }
