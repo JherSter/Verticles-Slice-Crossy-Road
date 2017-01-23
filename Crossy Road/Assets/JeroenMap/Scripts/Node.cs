@@ -11,4 +11,8 @@ public class Node {
         IsWalkable = true;
         Object = null;
     }
+    public void Destroy()
+    {
+        
+    }
 }

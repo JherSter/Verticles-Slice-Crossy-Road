@@ -23,7 +23,7 @@ public class GridPrinter : MonoBehaviour {
 
             for (int x = 0; x < _grid.gridSize.x; x++)
             {
-                for (int z = 0; z < _grid.gridSize.z; x++)
+                for (int z = 0; z < _grid.gridSize.z; z++)
                 {
 
                 }
