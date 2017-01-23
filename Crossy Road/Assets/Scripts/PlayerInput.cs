@@ -31,7 +31,7 @@ public class PlayerInput : MonoBehaviour {
             }
             if (Input.GetAxisRaw("A") == 1)
             {
-                Movement.Right;
+                Movement.Right();
                 if (WaitBetweenMovement)
                 {
                     Wait();
@@ -39,7 +39,7 @@ public class PlayerInput : MonoBehaviour {
             }
             if (Input.GetAxisRaw("D") == 1)
             {
-                Movement.Backward;
+                Movement.Backward();
                 if (WaitBetweenMovement)
                 {
                     Wait();

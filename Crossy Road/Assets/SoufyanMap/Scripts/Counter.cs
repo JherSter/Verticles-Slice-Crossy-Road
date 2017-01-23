@@ -4,46 +4,47 @@ using UnityEngine;
 
 public class Counter : MonoBehaviour
 {
-    [SerializeField] private int _count;
+    private int _count = 0;
+
 	// Use this for initialization
 	void Start ()
     {
-		
+        
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		
+        Increase();
 	}
 
-    void Increase()
+    public void Increase()
+    {
+        _count++;
+    }
+
+    public void Decrease()
     {
 
     }
 
-    void Decrease()
+    public void Add(int _temp)
+    {
+        
+    }
+
+    public void Reset()
     {
 
     }
 
-    void Add()
+    public void Set(int _temp)
     {
 
     }
 
-    void Reset()
+    public int GetCount()
     {
-
-    }
-
-    void Set()
-    {
-
-    }
-
-    void GetCount()
-    {
-
+        return _count;
     }
 }

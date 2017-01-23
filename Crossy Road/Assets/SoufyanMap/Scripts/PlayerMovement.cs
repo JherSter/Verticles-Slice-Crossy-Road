@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _rotateSpeed = 25;
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+
+    void Update ()
     {
         Forward();
         Left();
@@ -14,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
         Backward();
 	}
 
-    void Forward()
+    public void Forward()
 	{
 		if (Input.GetKeyDown (KeyCode.W))
         {	
@@ -23,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 	}
 
-    void Left()
+    public void Left()
     {
         if(Input.GetKeyDown(KeyCode.A))
         {
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 		}
     }
 
-    void Right()
+    public void Right()
     {
         if(Input.GetKeyDown(KeyCode.D))
         {
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Backward()
+    public void Backward()
     {
         if(Input.GetKeyDown(KeyCode.S))
         {
@@ -49,6 +50,4 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
         }
     }
-
-
 }
