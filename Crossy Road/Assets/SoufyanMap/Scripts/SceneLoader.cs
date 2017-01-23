@@ -2,19 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-	// Use this for initialization
-	void Start ()
+
+    public void sceneLoad()
     {
-        SceneManager.LoadScene(" ", LoadSceneMode.Additive);
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        StartCoroutine("WaitTime");
+        StartCoroutine("ChangeScene");
+    }
+
+    IEnumerator WaitTime()
     {
-		
-	}
+        SceneManager.LoadScene("testscene");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("SoufyanScene");
+    }
+
+    IEnumerator ChangeScene()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(1);
+    }
 }
