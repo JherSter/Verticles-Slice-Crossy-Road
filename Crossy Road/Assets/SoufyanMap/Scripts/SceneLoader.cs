@@ -8,20 +8,21 @@ public class SceneLoader : MonoBehaviour
 
     public void sceneLoad()
     {
-        StartCoroutine("WaitTime");
-        StartCoroutine("ChangeScene");
+        ChangeScene();
     }
 
-    IEnumerator WaitTime()
+    public void ChangeScene()
     {
-        SceneManager.LoadScene("testscene");
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("SoufyanScene");
+        SceneManager.LoadScene(0);
+        //Invoke("MainScene", 2);
+        StartCoroutine("MainScene");
+        //Debug.Log("test");
     }
 
-    IEnumerator ChangeScene()
+    IEnumerator MainScene()
     {
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(1);
+        //Debug.Log("SoufyanScene");
     }
 }
