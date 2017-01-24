@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
+    private void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
 
     public void sceneLoad()
     {
