@@ -10,23 +10,20 @@ public class SceneLoader : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
-    public void sceneLoad()
+    public void SceneLoad()
     {
         ChangeScene();
     }
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene(0);
-        //Invoke("MainScene", 2);
+        SceneManager.LoadScene("LoadingScene");
         StartCoroutine("MainScene");
-        //Debug.Log("test");
     }
 
     IEnumerator MainScene()
     {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(1);
-        //Debug.Log("SoufyanScene");
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("SoufyanScene");
     }
 }
