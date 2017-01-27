@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
-    private void Awake()
+    void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     public void SceneLoad()

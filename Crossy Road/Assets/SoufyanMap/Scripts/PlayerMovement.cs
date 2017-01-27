@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _rotateSpeed = 25;
+    
     // Update is called once per frame
-
     void Update ()
     {
         Forward();
