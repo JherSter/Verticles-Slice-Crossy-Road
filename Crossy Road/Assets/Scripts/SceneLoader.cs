@@ -5,23 +5,25 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
-
-    public void sceneLoad()
+    void Awake()
     {
-        StartCoroutine("WaitTime");
-        StartCoroutine("ChangeScene");
+        DontDestroyOnLoad(gameObject);
     }
 
-    IEnumerator WaitTime()
+    public void SceneLoad()
     {
-        SceneManager.LoadScene("testscene");
-        yield return new WaitForSeconds(2);
+        ChangeScene();
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene("LoadingScene");
+        StartCoroutine("MainScene");
+    }
+
+    IEnumerator MainScene()
+    {
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("SoufyanScene");
-    }
-
-    IEnumerator ChangeScene()
-    {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(1);
     }
 }
