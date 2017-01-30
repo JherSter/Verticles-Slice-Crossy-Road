@@ -33,5 +33,6 @@ public class PlayerDeath : MonoBehaviour {
     void Die()
     {
         Player_Died.Invoke();
+
     }
 }
