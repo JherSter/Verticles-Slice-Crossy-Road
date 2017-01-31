@@ -9,6 +9,7 @@ public class CameraFollow : MonoBehaviour {
 
 
 
+
     private void Start (){
 
 	}
@@ -17,7 +18,7 @@ public class CameraFollow : MonoBehaviour {
     private void Update(){
 		_shouldpos = Vector3.Lerp (gameObject.transform.position, Player.transform.position, Time.deltaTime);
 
-       transform.position = new Vector3(_shouldpos.x,8,_camera.z += 0.02f);
+       transform.position = new Vector3(_shouldpos.x,70,_shouldpos.z);
 
         }
     }

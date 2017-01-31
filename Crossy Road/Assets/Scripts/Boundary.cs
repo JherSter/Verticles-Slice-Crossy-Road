@@ -2,19 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Boundary : MonoBehaviour
 {
-    
+    public SceneLoader _sceneLoader;
 
 
-    void Update() {
+    private void Update()
+    {
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
         if (screenPosition.y > Screen.height || screenPosition.y < 0)
-            Destroy(gameObject);
+        {
 
 
+
+
+
+        }
     }
 }
+
+
 
 
 

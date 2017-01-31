@@ -17,9 +17,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Forward()
 	{
-		if (Input.GetKeyDown (KeyCode.W))
+		if (Input.GetKeyDown (KeyCode.S))
         {	
-			transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z + 1);
+			transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z + 5);
             transform.rotation = Quaternion.AngleAxis(0, -Vector3.up);
 
 		}
@@ -27,27 +27,27 @@ public class PlayerMovement : MonoBehaviour
 
     public void Left()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.D))
         {
-			transform.position = new Vector3 (transform.position.x - 1, transform.position.y, transform.position.z);
+			transform.position = new Vector3 (transform.position.x - 5, transform.position.y, transform.position.z);
             transform.rotation = Quaternion.AngleAxis(-90, Vector3.up);
 		}
     }
 
     public void Right()
     {
-        if(Input.GetKeyDown(KeyCode.D))
+        if(Input.GetKeyDown(KeyCode.A))
         {
-			transform.position = new Vector3 (transform.position.x + 1, transform.position.y, transform.position.z);
+			transform.position = new Vector3 (transform.position.x + 5, transform.position.y, transform.position.z);
             transform.rotation = Quaternion.AngleAxis(90, Vector3.up);
         }
     }
 
     public void Backward()
     {
-        if(Input.GetKeyDown(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.W))
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 5);
             transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
         }
     }
